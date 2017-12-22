@@ -4,12 +4,12 @@ var roleMiner = {
     run: function(creep) {
         
         if (creep.carry.energy < creep.carryCapacity) {
-            creep.memory.repairer = true;
+            creep.memory.miner = true;
         }
         else {
-            creep.memory.repairer = false;
+            creep.memory.miner = false;
         }
-        if(creep.memory.repairer){
+        if(creep.memory.miner){
         
             var sources = creep.room.find(FIND_SOURCES);
             if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
